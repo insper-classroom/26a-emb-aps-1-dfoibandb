@@ -1,9 +1,12 @@
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
+#include "wahwah.h"
+#include "success.h"
 
 #define NUM_PAIRS  4
 #define BUZZER_PIN 9
 #define BEEP_MS    100
+
 
 const unsigned int LEDS[]    = {10, 11, 12, 13};
 const unsigned int BUTTONS[] = {18, 19, 20, 21};
