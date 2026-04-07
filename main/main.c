@@ -117,7 +117,6 @@ int main(void) {
 
                     bool botao_errado = leitura & ~esperado;
                     bool par_completo = (leitura & esperado) == esperado;
-                    bool botao_parcial = !botao_errado && !par_completo;
 
                     if (botao_errado) {
                         botoes_apertados = 0;
@@ -128,7 +127,7 @@ int main(void) {
                         break;
                     }
 
-                    if (botao_parcial) {
+                    if (!par_completo) {
                         if (!prazo_ativo()) iniciar_prazo();
                         break;
                     }
